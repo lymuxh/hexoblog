@@ -82,7 +82,7 @@ deploy:
   repo: https://github.com/lymuxh/lymuxh.github.io.git
   branch: master
 
-## hexo-generator-json-content
+## hexo-generator-json-content 所有文章按钮
 jsonContent:
     meta: false
     pages: false
