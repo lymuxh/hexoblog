@@ -3,7 +3,7 @@ title: CocoaPods
 date: 2016-10-11 14:12:47
 tags: [CocoaPods,IOS]
 ---
-# CocoaPods 是什么
+## CocoaPods 是什么
 
 当你开发iOS应用时，会经常使用到很多第三方开源类库，比如JSONKit，AFNetWorking等等。可能某个类库又用到其他类库，所以要使用它，必须得另外下载其他类库，而其他类库又用到其他类库，“子子孙孙无穷尽也”，这也许是比较特殊的情况。总之就是，手动一个个去下载所需类库十分麻烦，尤其是不同版本类库依赖的不同版本类库。另外一种常见情况是，你项目中用到的类库有更新，你必须得重新下载新版本，重新加入到项目中，十分麻烦。如果能有什么工具能解决这些恼人的问题，那将“善莫大焉”。所以，你需要 CocoaPods。
 
@@ -11,7 +11,7 @@ CocoaPods应该是iOS最常用最有名的类库管理工具了，上述两个�
 
  <!-- more -->
 
-# 如何下载和安装 CocoaPods
+## 如何下载和安装 CocoaPods
 
 在安装CocoaPods之前，首先要在本地安装好Ruby环境。Mac中带有安装好的Ruby环境，如果安装CocoaPods时显示版本过低，参考[mac下升级ruby环境版本](http://blog.csdn.net/archer_sc/article/details/52043305)
 
@@ -35,7 +35,7 @@ $ gem sources -a https://ruby.taobao.org/
 
 `$ gem sources -l`
 
-# 如何使用 CocoaPods
+## 如何使用 CocoaPods
 
 例如使用CocoaPods，在项目中导入AFNetworking类库
 
@@ -72,7 +72,7 @@ AFNetworking类库在GitHub地址是：[https://github.com/AFNetworking/AFNetwor
 ` #import "AFNetworking.h"`
 
 
-# 常见问题
+## 常见问题
 
 1. 如何导入多个第三方库
 

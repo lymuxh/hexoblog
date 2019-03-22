@@ -100,19 +100,19 @@ if (是否是根据storyboard来创建的控制器) {
 # Controller的view的生命周期
 
 下面是代表控制器视图的生命周期的7个方法
-1. viewDidLoad
+viewDidLoad
 
-2. viewWillAppear
+viewWillAppear
 
-3. viewDidAppear
+viewDidAppear
 
-4. viewWillDisappear
+viewWillDisappear
 
-5. viewDidDisappear
+viewDidDisappear
 
-6. viewWillUnload
+viewWillUnload
 
-7. viewDidUnload
+viewDidUnload
 
 下面是这些方法的调用顺序图：
 

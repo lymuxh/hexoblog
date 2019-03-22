@@ -16,23 +16,23 @@ tags: [UIView,动画]
 
  UIView动画可以设置的动画属性有:
 
- 1. 大小变化(frame)
+ 大小变化(frame)
 
- 2. 拉伸变化(bounds)
+ 拉伸变化(bounds)
 
- 3. 中心位置(center)
+ 中心位置(center)
 
- 4. 旋转(transform)
+ 旋转(transform)
 
- 5. 透明度(alpha)
+ 透明度(alpha)
 
- 6. 背景颜色(backgroundColor)
+ 背景颜色(backgroundColor)
 
- 7. 拉伸内容(contentStretch)
+ 拉伸内容(contentStretch)
 
 ## UIView动画方法
 
-1. 动画开始和结束方法
+1.动画开始和结束方法
 
    `[UIViewbeginAnimations:(nullableNSString*)context:(nullablevoid*)];`
 
@@ -61,7 +61,7 @@ tags: [UIView,动画]
 
  动画提交。
 
-2. 动画参数设置
+2.动画参数设置
 
  ```objective-c
 
@@ -320,7 +320,7 @@ completion:^(BOOLfinished){
 
   # UIView 动画实例
 
-   1. 普通动画
+   1.普通动画
 
   下面三段代码都实现了相同的视图frame的变化，不同之处只在于其延迟时间、过渡效果和结束回调。
 
@@ -349,7 +349,7 @@ NSLog(@"动画结束");
 }
     ```
 
-   2. Spring动画
+   2.Spring动画
 
    ```objective-c
    -(void)blockAni{
@@ -362,7 +362,7 @@ NSLog(@"动画结束");
 
    ```
 
-   3. keyFrames动画
+   3.keyFrames动画
 
   这里以实现视图背景颜色变化（红-绿-蓝-紫）的过程来演示关键帧动画。
 
@@ -388,7 +388,7 @@ NSLog(@"动画结束");
 }
    ```
 
-   4. 转场动画
+4.转场动画
 
   单个视图转场
 

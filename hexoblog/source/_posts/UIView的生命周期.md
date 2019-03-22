@@ -6,11 +6,11 @@ tags: [UIView,布局,CALayer]
 
 # 创建视图
 
-1. initWithFrame:(CGRect)frame
+1.initWithFrame:(CGRect)frame
 
   initWithFrame方法用来初始化并返回一个新的视图对象,根据指定的CGRect（尺寸）。
 
-2. initWithCoder:(NSCoder *)aDecoder
+2.initWithCoder:(NSCoder *)aDecoder
 
   实际编程中，**我们如果用Interface Builder 方式创建了UIView对象。（也就是，用拖控件的方式）那么，initWithFrame方法方法是不会被调用的。** 因为nib文件已经知道如何初始化该View。（因为，我们在拖该view的时候，就定义好了长、宽、背景等属性）。
 
@@ -18,7 +18,7 @@ tags: [UIView,布局,CALayer]
 
 <!-- more -->
 
-3. 如何选择使用？
+3.如何选择使用？
 
   当我们所写的程序里没用用Nib文件(XIB)时,用代码控制视图内容，需要调用initWithFrame去初始化
 
@@ -50,7 +50,7 @@ tags: [UIView,布局,CALayer]
 
 # UIView的layoutSubviews和drawRect方法
 
- 1. layoutSubviews
+ 1.layoutSubviews
 
  在UIView里面有一个方法layoutSubviews，这个方法具体作用是什么呢？
 
@@ -90,7 +90,7 @@ tags: [UIView,布局,CALayer]
 
  **当view的fram的值为0的时候，`addSubview`也不会调用`layoutSubviews`的。**
 
- 2. drawRect:
+ 2.drawRect:
 
  这个方法是用来重绘的。
 
@@ -114,7 +114,7 @@ tags: [UIView,布局,CALayer]
 
   * 若要实时画图，不能使用gestureRecognizer，只能使用touchbegan等方法来掉用setNeedsDisplay实时刷新屏幕
 
- 3. sizeToFit
+ 3.sizeToFit
 
   * sizeToFit会自动调用sizeThatFits方法；
 
@@ -126,7 +126,7 @@ tags: [UIView,布局,CALayer]
 
 # UIView和CALayer
 
-1. 首先UIView可以响应事件，Layer不可以，父类不同。
+1.首先UIView可以响应事件，Layer不可以，父类不同。
 
   UIKit使用UIResponder作为响应对象，来响应系统传递过来的事件并进行处理。UIApplication、UIViewController、UIView、和所有从UIView派生出来的UIKit类（包括UIWindow）都直接或间接地继承自UIResponder类。
 
@@ -136,13 +136,13 @@ tags: [UIView,布局,CALayer]
 
   UIView有个layer属性，可以返回它的主CALayer实例，UIView有一个layerClass方法，返回主layer所使用的类，UIView的子类，可以通过重载这个方法，来让UIView使用不同的CALayer来显示。
 
-2. 图层不会直接渲染到屏幕上。
+2.图层不会直接渲染到屏幕上。
 
  在模型-视图-控制器（model-view-controller）概念里面NSView和UIView是典型的视图部分，但是在核心动画里面图层是模型部分。图层封装了几何、时间、可视化属性，同时它提供了图层现实的内容，但是实际显示的过程则不是由它来完成。
 
  每个可见的图层树由两个相应的树组成:一个是呈现树，一个是渲染树。
 
-3. UIView的CALayer类似UIView的子View树形结构，也可以向它的layer上添加子layer，来完成某些特殊的表示。
+3.UIView的CALayer类似UIView的子View树形结构，也可以向它的layer上添加子layer，来完成某些特殊的表示。
 
  ```objective-c
  grayCover = [[CALayer alloc] init];
@@ -151,9 +151,9 @@ grayCover.backgroundColor = [[[UIColor blackColor] colorWithAlphaComponent:0.2] 
 //会在目标View上敷上一层黑色的透明薄膜。
 
  ```
-4. UIView的layer树形在系统内部，被维护着三份copy。分别是逻辑树，这里是代码可以操纵的；动画树，是一个中间层，系统就在这一层上更改属性，进行各种渲染操作；显示树，其内容就是当前正被显示在屏幕上得内容。
+4.UIView的layer树形在系统内部，被维护着三份copy。分别是逻辑树，这里是代码可以操纵的；动画树，是一个中间层，系统就在这一层上更改属性，进行各种渲染操作；显示树，其内容就是当前正被显示在屏幕上得内容。
 
-5. 动画的运作：对UIView的subLayer（非主Layer）属性进行更改，系统将自动进行动画生成，动画持续时间的缺省值似乎是0.25秒。
+5.动画的运作：对UIView的subLayer（非主Layer）属性进行更改，系统将自动进行动画生成，动画持续时间的缺省值似乎是0.25秒。
 
  在 Core Animation 编程指南的 “How to Animate Layer-Backed Views” 中，对为什么会这样做出了一个解释：
 
@@ -171,7 +171,7 @@ grayCover.backgroundColor = [[[UIColor blackColor] colorWithAlphaComponent:0.2] 
 
  当 layer 在背后支持一个 view 的时候，view 就是它的 delegate；
 
-6. 坐标系统：CALayer的坐标系统比UIView多了一个anchorPoint属性，使用CGPoint结构表示，值域是0~1，是个比例值。这个点是各种图形变换的坐标原点，同时会更改layer的position的位置，它的缺省值是{0.5,0.5}，即在layer的中央。
+6.坐标系统：CALayer的坐标系统比UIView多了一个anchorPoint属性，使用CGPoint结构表示，值域是0~1，是个比例值。这个点是各种图形变换的坐标原点，同时会更改layer的position的位置，它的缺省值是{0.5,0.5}，即在layer的中央。
 
  某layer.anchorPoint = CGPointMake(0.f,0.f);
 如果这么设置，只会将layer的左上角被挪到原来的中间位置，必须加上这一句：
@@ -181,7 +181,7 @@ grayCover.backgroundColor = [[[UIColor blackColor] colorWithAlphaComponent:0.2] 
 
  layer可以设置圆角显示（cornerRadius），也可以设置阴影 (shadowColor)。但是如果layer树中某个layer设置了圆角，树种所有layer的阴影效果都将不显示了。因此若是要有圆角又要阴影，变通方法只能做两个重叠的UIView，一个的layer显示圆角，一个layer显示阴影......
 
-7. 渲染：当更新层，改变不能立即显示在屏幕上。当所有的层都准备好时，可以调用setNeedsDisplay方法来重绘显示。
+7.渲染：当更新层，改变不能立即显示在屏幕上。当所有的层都准备好时，可以调用setNeedsDisplay方法来重绘显示。
 
  `[gameLayer setNeedsDisplay];`
 
@@ -193,7 +193,7 @@ grayCover.backgroundColor = [[[UIColor blackColor] colorWithAlphaComponent:0.2] 
 
  `[gameLayer renderInContext:UIGraphicsGetCurrentContext()];`
 
-8. 变换：要在一个层中添加一个3D或仿射变换，可以分别设置层的transform或affineTransform属性。
+8.变换：要在一个层中添加一个3D或仿射变换，可以分别设置层的transform或affineTransform属性。
 
  ```objective-c
  characterView.layer.transform = CATransform3DMakeScale(-1.0,-1.0,1.0);
@@ -201,19 +201,19 @@ grayCover.backgroundColor = [[[UIColor blackColor] colorWithAlphaComponent:0.2] 
  CGAffineTransform transform = CGAffineTransformMakeRotation(45.0);
  backgroundView.layer.affineTransform = transform;
 ```
-9. 变形：Quartz Core的渲染能力，使二维图像可以被自由操纵，就好像是三维的。图像可以在一个三维坐标系中以任意角度被旋转，缩放和倾斜。CATransform3D的一套方法提供了一些魔术般的变换效果。
+9.变形：Quartz Core的渲染能力，使二维图像可以被自由操纵，就好像是三维的。图像可以在一个三维坐标系中以任意角度被旋转，缩放和倾斜。CATransform3D的一套方法提供了一些魔术般的变换效果。
 
 # UIView autoLayout
 
-1. iOS Autolayout
+1.iOS Autolayout
 
  [iOS Autolayout](http://www.jianshu.com/p/d7a4790090f1)
 
-2. storyboard autolayout
+2.storyboard autolayout
 
 [storyboard中autolayout和size class的使用详解](http://blog.csdn.net/liangliang103377/article/details/40082255)
 
-3. iOS Autolayout之Masonry
+3.iOS Autolayout之Masonry
 
 [iOS Autolayout之Masonry](http://www.jianshu.com/p/10a250cc5018)
 

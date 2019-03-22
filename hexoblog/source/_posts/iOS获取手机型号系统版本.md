@@ -30,7 +30,7 @@ tags: [iOS,系统型号,系统版本]
 
 `#import <sys/utsname.h>`
 
-`- (NSString*)iphoneType {
+```- (NSString*)iphoneType {
 
 struct utsname systemInfo;
 
@@ -167,11 +167,11 @@ if([platform isEqualToString:@"i386"])return @"iPhone Simulator";
 if([platform isEqualToString:@"x86_64"])return @"iPhone Simulator";
 returnplatform;
 }
-`
+```
 
 ## 系统版本比较定义
 
-`
+```
 #define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
 
 #define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
@@ -179,17 +179,19 @@ returnplatform;
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 
-#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)`
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+```
 
 
 ## 定义主线程执行
 
-`#define dispatch_async_main_safe(block)\
+```#define dispatch_async_main_safe(block)\
 if ([NSThread isMainThread]) {\
 block();\
 } else {\
 dispatch_async(dispatch_get_main_queue(), block);\
-}`
+}
+```
 
 
 

@@ -4,8 +4,6 @@ date: 2016-11-29 11:11:10
 tags: [UITableView,性能优化,随笔,文档]
 ---
 
-# UITableView介绍
-
 在iOS开发中UITableView可以说是使用最广泛的控件，我们平时使用的软件中到处都可以看到它的影子，类似于微信、QQ、新浪微博等软件基本上随处都是UITableView。当然它的广泛使用自然离不开它强大的功能，今天这篇文章将针对UITableView重点展开讨论。
 
 UITableView有两种风格：UITableViewStylePlain和UITableViewStyleGrouped。这两者操作起来其实并没有本质区别，只是后者按分组样式显示前者按照普通样式显示而已。

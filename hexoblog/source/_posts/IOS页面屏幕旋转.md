@@ -6,11 +6,11 @@ tags: [iOS,屏幕旋转]
 IOS应用在使用过程中手机的方向不一定一直是正面竖直状态的，交互好的应用会根据手机的方向动态的调整界面的布局。Apple对手机app的多方向适配没有强制要求，对IPAD应用要求必须适配竖直和水平状态。
 
 # 全局屏幕旋转适配
-1. 在AppDelegate回调中添加
+1.在AppDelegate回调中添加
 
   `- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(nullable UIWindow *)window `
 
-2. 通过info.plist文件进行配置
+2.通过info.plist文件进行配置
 
 # 单个ViewController屏幕旋转适配
 

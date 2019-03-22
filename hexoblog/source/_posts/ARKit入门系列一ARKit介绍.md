@@ -4,7 +4,6 @@ date: 2017-10-19 14:26:18
 tags: [ARKit,iOS11]
 ---
 
-# AR技术介绍
 
 > 增强现实技术（Augmented Reality，简称 AR），是一种实时地计算摄影机影像的位置及角度并加上相应图像、视频、3D模型的技术，这种技术的目标是在屏幕上把虚拟世界套在现实世界并进行互动。
 
@@ -61,22 +60,22 @@ ARKit框架提供了两种AR技术，一种是基于3D场景(SceneKit)实现的�
 
 # 环境要求
 
-1. Xcode版本：Xcode9及以上
+1.Xcode版本：Xcode9及以上
 
-2. iOS系统: iOS11及以上
+2.iOS系统: iOS11及以上
 
-3. iOS设备：处理器A9及以上（6S机型及以上）
+3.iOS设备：处理器A9及以上（6S机型及以上）
 
-4. MacOS系统：10.12.4及以上（安装Xcode9对Mac系统版本有要求）
+4.MacOS系统：10.12.4及以上（安装Xcode9对Mac系统版本有要求）
 目前只有Bete版本，链接地址:https://developer.apple.com/download/
 
 # ARKit项目创建
 
- 1.  打开Xcode9bete版本，新建一个工程，选择 Augmented Reality APP (Xcode9新增),点击next。
+ 1.打开Xcode9bete版本，新建一个工程，选择 Augmented Reality APP (Xcode9新增),点击next。
 
- 2. 包含技术选择SceneKit（3D）,如果2D选择SpriteKit。
+ 2.包含技术选择SceneKit（3D）,如果2D选择SpriteKit。
 
- 3. 此时,Xcode会自动为我们生成一段极其简洁的AR代码。  
+ 3.此时,Xcode会自动为我们生成一段极其简洁的AR代码。  
 
 
 # ARKit项目3DDemo代码

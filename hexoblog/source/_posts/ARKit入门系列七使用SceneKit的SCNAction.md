@@ -4,7 +4,6 @@ date: 2017-11-06 18:40:39
 tags: [SceneKit,SCNAction]
 ---
 
-# SCNAction
 
 前面关于旋转我们利用CABasicAnimation来实现旋转动画，其实在SceneKit中，有一种更为简单的方法去实现一些基础动画，那就是SCNAction，它的执行对象是SCNNode。
 

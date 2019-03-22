@@ -3,17 +3,16 @@ title: XCODE报错调试汇总
 date: 2016-09-27 18:22:49
 tags: [Crash,XCODE]
 ---
-# XCODE报错调试汇总
 
 ## crash report 获取分析
 
-1. 在提交新版本到AppStore时候一定要保留每个版本的.dSYM文件。无法定位crash的代码肯定是.dSYM文件和crash report对应的程序版本不一致。
+ 在提交新版本到AppStore时候一定要保留每个版本的.dSYM文件。无法定位crash的代码肯定是.dSYM文件和crash report对应的程序版本不一致。
 
-2. 由用户反馈的当前版本的crash report可以在iTunesConnect下载。如果是存在设备上的，可以用Organizer导出。
+1.由用户反馈的当前版本的crash report可以在iTunesConnect下载。如果是存在设备上的，可以用Organizer导出。
 
-3. 打开.crash文件，参考Hardware Model确定故障设备是armv6还是armv7架构。
+2.打开.crash文件，参考Hardware Model确定故障设备是armv6还是armv7架构。
 
-4. 利用.dSYM定位调用栈记录中未确定的offset。
+3.利用.dSYM定位调用栈记录中未确定的offset。
 
 <!-- more -->
 
@@ -49,7 +48,7 @@ tags: [Crash,XCODE]
 
 　　这样就确定了调用栈中offset对应的源代码位置。注意如果此时.dSYM文件版本不对，会得到完全无用的错误结果。之后就可以根据所有信息综合分析，确定crash的原因并修正。
 　　
-## 常见IOS Crash 原因
+## 常见iOS Crash 原因
 
 ### 内存管理错误
 

@@ -6,7 +6,7 @@ tags: [AR ,ARKit,API]
 
  框架中所有的API 本篇主要翻译自苹果官方文档，适当加上一些笔者的见解.
 
-  ![ARKit与SceneKit](/images/arkit／arkit_03_01.png)
+  ![ARKit与SceneKit](/images/arkit/arkit_03_01.png)
 
 ## ARAnchor
   

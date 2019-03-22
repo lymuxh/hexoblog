@@ -4,7 +4,6 @@ date: 2017-11-06 18:39:58
 tags: [SceneKit,旋转]
 ---
 
-#  旋转
 
 旋转模型是经常遇到了，我们之前用CABasicAnimation 可以旋转一个view，其实它也可以旋转一个SCNNode。
 

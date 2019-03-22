@@ -4,8 +4,6 @@ date: 2016-12-01 13:46:47
 tags: [iOS,Core Graphics]
 ---
 
-# iOS绘图
-
 > Core Graphics Framework是一套基于C的API框架，使用了Quartz作为绘图引擎。它提供了低级别、轻量级、高保真度的2D渲染。该框架可以用于基于路径的绘图、变换、颜色管理、脱屏渲染，模板、渐变、遮蔽、图像数据管理、图像的创建、遮罩以及PDF文档的创建、显示和分析。
 
 iOS支持两套图形API族：Core Graphics/QuartZ 2D 和OpenGL ES。OpenGL ES是跨平台的图形API，属于OpenGL的一个简化版本。QuartZ 2D是苹果公司开发的一套API，它是Core Graphics Framework的一部分。
@@ -21,11 +19,11 @@ Core Graphics API所有的操作都在一个上下文中进行。所以在绘图
 
 判断一个上下文是否为当前图形上下文需要注意的几点：
 
-1. UIGraphicsBeginImageContextWithOptions函数不仅仅是创建了一个适用于图形操作的上下文，并且该上下文也属于当前上下文。
+UIGraphicsBeginImageContextWithOptions函数不仅仅是创建了一个适用于图形操作的上下文，并且该上下文也属于当前上下文。
 
-2. 当drawRect方法被调用时，UIView的绘图上下文属于当前图形上下文。
+当drawRect方法被调用时，UIView的绘图上下文属于当前图形上下文。
 
-3. 回调方法所持有的context：参数并不会让任何上下文成为当前图形上下文。此参数仅仅是对一个图形上下文的引用罢了。
+回调方法所持有的context：参数并不会让任何上下文成为当前图形上下文。此参数仅仅是对一个图形上下文的引用罢了。
 
 ## UIKit
 
@@ -395,4 +393,3 @@ CGImageRelease(marsLeft); CGImageRelease(marsRight);
 
 1. [iOS绘图教程](http://blog.csdn.net/huangznian/article/details/42741039)
 
-2. 《Programming iOS5》

@@ -4,9 +4,8 @@ date: 2017-11-06 17:36:40
 tags: [ARKit , SceneKit]
 ---
 
-## SceneKit
 
- ARSCNView 继承自SceneKit的 SCNView，SceneKit展示的内容在ARSCNView上也可以展示，SceneKit作为构建3D场景的框架，且可以与Core Animation和SpriteKit无缝交互。在SceneKit中可以直接引入COLLADA行业标准文件制作好的3D模型或场景。
+ARSCNView 继承自SceneKit的 SCNView，SceneKit展示的内容在ARSCNView上也可以展示，SceneKit作为构建3D场景的框架，且可以与Core Animation和SpriteKit无缝交互。在SceneKit中可以直接引入COLLADA行业标准文件制作好的3D模型或场景。
 
 与SpriteKit一样，SceneKit通过场景（SCNScene）来显示物体，场景包涵在SCNView。场景内同样是以节点的结构来呈现物体。场景里可以包含这些类型的项目：
 

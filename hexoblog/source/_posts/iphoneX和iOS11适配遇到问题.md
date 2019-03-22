@@ -4,27 +4,29 @@ date: 2017-09-26 18:25:14
 tags: [iPhoneX,iOS11] 
 ---
 
-# iphoneX和iOS11适配遇到问题
 
 ## 1.底部tabbar 选中效果下移
 
-`self.tabBar.backgroundImage =[UIColor createImageWithColor:RGB(38.0, 50.0, 56.0)]；
-self.tabBar.selectionIndicatorImage = [UIColor createImageWithColor:CLSMainGrayColor size:CGSizeMake([UIScreen mainScreen].bounds.size.width/[_tabControllers count], self.tabBar.bounds.size.height)];`
+```self.tabBar.backgroundImage =[UIColor createImageWithColor:RGB(38.0, 50.0, 56.0)]；
+self.tabBar.selectionIndicatorImage = [UIColor createImageWithColor:CLSMainGrayColor size:CGSizeMake([UIScreen mainScreen].bounds.size.width/[_tabControllers count], self.tabBar.bounds.size.height)];
+```
 
 改为
 
- `UITabBar *appearance = [UITabBar appearance];
+```UITabBar *appearance = [UITabBar appearance];
     [appearance setBackgroundImage:[UIColor createImageWithColor:RGB(38.0, 50.0, 56.0)]];
     UIImage *selectionIndicatorImage = [UIColor createImageWithColor:CLSMainGrayColor size:CGSizeMake([UIScreen mainScreen].bounds.size.width/[_tabControllers count], self.tabBar.frame.size.height)];
     selectionIndicatorImage = [selectionIndicatorImage resizableImageWithCapInsets:UIEdgeInsetsMake(1, 0, 0, 0)];
-    [appearance setSelectionIndicatorImage:selectionIndicatorImage];`
+    [appearance setSelectionIndicatorImage:selectionIndicatorImage];
+    ```
     
 <!-- more -->
 
 ## 2. iphoneX下面collectionView显示下移
 
 
-`self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-StatusRect.size.height-44-48) collectionViewLayout:flowLayout];`
+```self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-StatusRect.size.height-44-48) collectionViewLayout:flowLayout];
+```
 
 改为
 
@@ -59,7 +61,7 @@ self.tabBar.selectionIndicatorImage = [UIColor createImageWithColor:CLSMainGrayC
 
 ## 3.UIToolbar 上面UIButton 点击没响应
 
- `UIToolbar *bar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 44)];
+ ```UIToolbar *bar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 44)];
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(ScreenWidth-60, 7, 50, 30)];
     [button setTitle:@"完成"forState:UIControlStateNormal];
     button.layer.cornerRadius = 4.0;
@@ -67,15 +69,17 @@ self.tabBar.selectionIndicatorImage = [UIColor createImageWithColor:CLSMainGrayC
     button.titleLabel.font = CFFontLevel3;
     [button addTarget:self action:@selector(finished) forControlEvents:UIControlEventTouchUpInside];
     [bar addSubview:button];
-    self.contentField.inputAccessoryView = bar;`
+    self.contentField.inputAccessoryView = bar;
+```
 
 改为
 
-`UIToolbar *bar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, LL_ScreenWidth, 44)];
+```UIToolbar *bar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, LL_ScreenWidth, 44)];
     UIBarButtonItem *space = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     UIBarButtonItem *finish = [[UIBarButtonItem alloc]initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(finished)];
     [bar setItems:@[space,space,finish]];
-    self.contentField.inputAccessoryView = bar;`
+    self.contentField.inputAccessoryView = bar;
+```
 
 ## 4.navigationBar里面自定义titleView上的按钮点击没有效果
 
@@ -92,7 +96,7 @@ self.navigationItem.titleView = _titleView;
 `
 然后在使用地方添加
 
-`
+```
 self.navigationItem.titleView = _titleView; 
 _titleView.intrinsicContentSize=CGSizeMake(200,40);
-`
+```

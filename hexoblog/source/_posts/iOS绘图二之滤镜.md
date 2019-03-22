@@ -679,4 +679,3 @@ CGContextEndTransparencyLayer(con);
 
 1. [iOS绘图教程](http://blog.csdn.net/huangznian/article/details/42741039)
 
-2. 《Programming iOS5》

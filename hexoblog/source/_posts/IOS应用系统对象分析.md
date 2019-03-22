@@ -37,35 +37,35 @@ UIKit Keys
 
 下面是一些常用的键的意义：
 
-1. Localiztion native development region --- CFBundleDevelopmentRegion 本地化相关，如果⽤户所在地没有相应的语言资源，则用这个key的value来作为默认
+1.Localiztion native development region --- CFBundleDevelopmentRegion 本地化相关，如果⽤户所在地没有相应的语言资源，则用这个key的value来作为默认
 
-2. Bundle display name --- CFBundleDisplayName 设置程序安装后显示的名称。应⽤程序名称限制在10-12个字符，如果超出，将被显示缩写名称。
+2.Bundle display name --- CFBundleDisplayName 设置程序安装后显示的名称。应⽤程序名称限制在10-12个字符，如果超出，将被显示缩写名称。
 
-3. Executaule file -- CFBundleExecutable 程序安装包的名称
+3.Executaule file -- CFBundleExecutable 程序安装包的名称
 
-4. Bundle identidier --- CFBundleIdentidier 该束的唯一标识字符串，该字符串的格式类似 com。yourcompany。yourapp，如果使⽤用模拟器跑你的应用，这个字段没有用处，如果你需要把你的应⽤部署到设备上，你必须⽣成一个证书，⽽在生成证书的时候，在apple的⽹网站上需要增加相应的app IDs。这⾥有一个字段Bundle identidier，如果这个Bundle identidier是一个完整字符串，那么文件中的这个字段必须和后者完全相同，如果app IDs中的字段含有通配符*，那么文件中的字符串必须符合后者的描述。
+4.Bundle identidier --- CFBundleIdentidier 该束的唯一标识字符串，该字符串的格式类似 com。yourcompany。yourapp，如果使⽤用模拟器跑你的应用，这个字段没有用处，如果你需要把你的应⽤部署到设备上，你必须⽣成一个证书，⽽在生成证书的时候，在apple的⽹网站上需要增加相应的app IDs。这⾥有一个字段Bundle identidier，如果这个Bundle identidier是一个完整字符串，那么文件中的这个字段必须和后者完全相同，如果app IDs中的字段含有通配符*，那么文件中的字符串必须符合后者的描述。
 
-5. InfoDictionary version --- CFBundleInfoDictionaryVersion Info。plist 格式的版本信息，一般创建后不修改。
+5.InfoDictionary version --- CFBundleInfoDictionaryVersion Info。plist 格式的版本信息，一般创建后不修改。
 
-6. Bundle name --- CFBundleName 产品名称
+6.Bundle name --- CFBundleName 产品名称
 
-7. Bundle OS Type code -- CFBundlePackageType ⽤来标识束类型的四个字母长的代码，一般都是APPL。
+7.Bundle OS Type code -- CFBundlePackageType ⽤来标识束类型的四个字母长的代码，一般都是APPL。
 
-8. Bundle versions string， short --- CFBundleShortVersionString ⾯向用户市场的束的版本字符串，应用的版本号。
+8.Bundle versions string， short --- CFBundleShortVersionString ⾯向用户市场的束的版本字符串，应用的版本号。
 
-9. Bundle creator OS Type code --- CFBundleSignature 用来标识创建者的四个字母长的代码。
+9.Bundle creator OS Type code --- CFBundleSignature 用来标识创建者的四个字母长的代码。
 
-10. Bundle version --- CFBundleVersion 应⽤程序版本号，每次部署应用程序的一个新版本时， 将会增加这个编号，在app store上用的。
+10.Bundle version --- CFBundleVersion 应⽤程序版本号，每次部署应用程序的一个新版本时， 将会增加这个编号，在app store上用的。
 
-11. Application require iPhone environment -- LSRequiresIPhoneOS 用于指示程序包是否只能运行在iPhone OS 系统上。Xcode自动加入这个键，并将它的值设置为true。您不应该改变这个键的值。
+11.Application require iPhone environment -- LSRequiresIPhoneOS 用于指示程序包是否只能运行在iPhone OS 系统上。Xcode自动加入这个键，并将它的值设置为true。您不应该改变这个键的值。
 
-12. Main storybard dile base name -- UIMainStoryboardFile 这是一个字符串，指定应用程序主nib文件的名称。
+12.Main storybard dile base name -- UIMainStoryboardFile 这是一个字符串，指定应用程序主nib文件的名称。
 
-13. supported interface orientations -- UISupportedInterfaceOrientations 程序默认支持的设备方向。
+13.supported interface orientations -- UISupportedInterfaceOrientations 程序默认支持的设备方向。
 
-14.  screen interface file base name -- Launch screen 这是一个字符串，指定应用程序启动页nib文件的名称。
+14.screen interface file base name -- Launch screen 这是一个字符串，指定应用程序启动页nib文件的名称。
 
-15. Status bar tinting parameters -- 定义状态蓝前景色，一般设置根据导航栏默认样式。
+15.Status bar tinting parameters -- 定义状态蓝前景色，一般设置根据导航栏默认样式。
 
 # 程序全局头文件pch
 
@@ -97,11 +97,11 @@ ios开发中难免会遇到一些oc与c混编的时候，当使用了pch文件�
 
 UIApplication是一个应用的单例类，可以做一些应用级别的操作。
 
-1. 设置应用图标右上角的消息条数。 --applicationIconBadgeNumber
+1.设置应用图标右上角的消息条数。 --applicationIconBadgeNumber
 
-2. 手机联网操作时，状态栏上的菊花等待图标指示器。waiting图标。---networkActivityIndicatorVisible
+2.手机联网操作时，状态栏上的菊花等待图标指示器。waiting图标。---networkActivityIndicatorVisible
 
-3. 利用UIApplication打开某个资源
+3.利用UIApplication打开某个资源
 
     *打开一个网页*
 
@@ -119,7 +119,7 @@ UIApplication是一个应用的单例类，可以做一些应用级别的操作�
 
   [app openURL:[NSURL URLWithString:@"mailto://1234578@qq.com"]];
 
-4. 通过UIApplication管理状态栏
+4.通过UIApplication管理状态栏
 
  iOS7开始可以通过两种方式来控制状态栏:
 
@@ -168,38 +168,38 @@ App容易受到干扰。正在玩游戏，一个电话打过来了。
 
  代理中的若干方法介绍:
 
-1. `- (BOOL)application: didFinishLaunchingWithOptions:`
+`- (BOOL)application: didFinishLaunchingWithOptions:`
 
  // app第一次启动完毕后就会调用(当程序启动后会显示一张启动图片, 当这个图片显示完毕, 消失后, 就开始调用这个方法)
 
-2. `- (void)applicationDidEnterBackground:(UIApplication *)application`
+`- (void)applicationDidEnterBackground:(UIApplication *)application`
 
  // 当程序进入后台时, 调用该方法。（比如：按了Home键, 或者一个电话打过来了, 当前程序都会进入后台。）
 // 在这个方法中可以做一些保存当前程序数据, 暂停程序的操作。
 
-3. `- (void)applicationWillEnterForeground:(UIApplication *)application`
+`- (void)applicationWillEnterForeground:(UIApplication *)application`
 
  // 当程序再次进入前台的时候调用。
 
-4. `- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application`
+`- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application`
 
  // 当发生内存警告时触发该事件。
 
-5. `- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings NS_AVAILABLE_IOS(8_0) ;`
+`- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings NS_AVAILABLE_IOS(8_0) ;`
 
- `- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken `
+`- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken `
 
- `- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error NS_AVAILABLE_IOS(3_0);`
+`- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error NS_AVAILABLE_IOS(3_0);`
 
   // 进行推送服务注册
 
-6. `- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window`
+`- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window`
 
  //应用支持屏幕旋转方向，目前旋转有控制器控制
 
-7. `- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url NS_DEPRECATED_IOS(2_0, 9_0, "Please use application:openURL:options:")`
+`- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url NS_DEPRECATED_IOS(2_0, 9_0, "Please use application:openURL:options:")`
 
- `- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation NS_DEPRECATED_IOS(4_2, 9_0, "Please use application:openURL:options:")`
+`- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation NS_DEPRECATED_IOS(4_2, 9_0, "Please use application:openURL:options:")`
 
  //处理第三方登录回调或启动
 
@@ -227,11 +227,29 @@ applicationWillTerminate
 
 `- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo`
 
-  iOS10改为使用 UserNotifications Framework's `-[UNUserNotificationCenterDelegate willPresentNotification:withCompletionHandler:]` or `-[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]` for user visible notifications and `-[UIApplicationDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]` for silent remote notifications;
+  iOS10改为使用 UserNotifications Framework's
+  
+   `-[UNUserNotificationCenterDelegate willPresentNotification:withCompletionHandler:]`
+   
+   or
+  
+  `-[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]` 
+
+  for user visible notifications and 
+  
+  `-[UIApplicationDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]` 
+  
+  for silent remote notifications;
 
 `- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification`
 
- iOS10改为使用 UserNotifications Framework's `-[UNUserNotificationCenterDelegate willPresentNotification:withCompletionHandler:]` or `-[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]`
+ iOS10改为使用 UserNotifications Framework's 
+ 
+ `-[UNUserNotificationCenterDelegate willPresentNotification:withCompletionHandler:]`
+ 
+  or 
+  
+  `-[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]`
 
 
 

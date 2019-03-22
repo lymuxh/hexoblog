@@ -18,9 +18,6 @@ tags: [IOS,大牛,博客]
 |庞海礁的个人空间 | http://www.olinone.com |  |
 |Casa Taloyum | http://casatwy.com |  |
 |MKenshin Cui's Blog | http://www.cnblogs.com/kenshincui |  |
-
-<!-- more -->
-
 |技术哥的博客 | http://suenblog.duapp.com |  |
 |老谭笔记 | http://www.tanhao.me |  |
 |coderyi | http://www.coderyi.com |  |
