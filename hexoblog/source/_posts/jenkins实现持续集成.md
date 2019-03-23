@@ -22,6 +22,8 @@ tags: [jenkins,继续集成]
 
 3.依次点击继续等安装完成，通过终端terminal，输入以下指令看是否完成
 
+<!-- more -->
+
 `java -version`
 
 如果能正常显示java版本说明java安装成功
@@ -49,6 +51,7 @@ PATH=".:$PATH:$JAVA_HOME.bin"
 添加完上述内容后，按‘esc’键退出编辑模式，输入‘：wq’保存并退出profile，需要配置生效，需要在终端执行如下指令：
 
 `source ~/.bash_profile`
+
 
 ### tomcat安装
 
